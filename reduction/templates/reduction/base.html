@@ -6,6 +6,33 @@
         <link rel="stylesheet" href="{% static 'reduction/css/custom.css' %}"/>
     </head>
 
+    <script type="text/javascript">
+        $(document).on('#submitButton', '#url', function (e) {
+            e.preventDefault();
+
+            $.ajax({
+                type: 'POST',
+                url: '/makeshort/',
+                data: {
+                    'url': $('url').val(),
+                    'csrfmiddlewaretoken' : $("input[name=csrfmiddlewaretoken]").val()
+                },
+                success: returnSuccess(),
+                dataType: 'json'
+            })
+        })
+
+        function returnSuccess(data) {
+            if (data.url) {
+                $('#url-result').text(data.url);
+                $('#url').val(' ');
+                $("a").attr("href", data.url);
+            } else {
+                $('#url-result').text("Please enter a URL!");
+            }
+        }
+    </script>
+
     <body>
     <a href="https://github.com/kistolbov"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#fff;
     color: #24292E;position: absolute; top: 0; border: 0; right: 0;">
