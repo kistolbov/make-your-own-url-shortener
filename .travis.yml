@@ -1,0 +1,19 @@
+language: python
+
+python:
+  - 3.8
+
+services:
+  - mysql
+
+env:
+  - DJANGO=3.0.2 DB=mysql
+
+install:
+  - pip install django
+
+before_script:
+  - mysql -e 'create database test;' -u root
+
+script:
+  - python manage.py test
