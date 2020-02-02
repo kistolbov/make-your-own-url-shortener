@@ -1,3 +1,12 @@
 from django.test import TestCase
 
-# Create your tests here.
+
+class URLShortenerTest(TestCase):
+    def check_duplication(self):
+        pass
+
+    def check_redirect_original_url(self):
+        pass
+
+    def check_get_url(self):
+        pass
