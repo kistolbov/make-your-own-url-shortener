@@ -1,3 +1,3 @@
-class InvalidGet(Exception):
+class InvalidRedirectShortURL(Exception):
     def __init__(self, *args):
         Exception.__init__(self, *args)

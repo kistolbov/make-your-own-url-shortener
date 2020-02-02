@@ -1,8 +1,8 @@
-from django.conf.urls import include, url
-from django.contrib import admin
+from django.urls import path
+from shorten.views import redirect_short_url, get_urls
+
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-
-    url(r'', include('reduction.urls'), name='reduction')
+    path('<short_id>/', redirect_short_url),
+    path('', get_urls, name='home')
 ]

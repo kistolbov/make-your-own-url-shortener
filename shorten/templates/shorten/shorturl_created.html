@@ -1,0 +1,19 @@
+{% extends 'shorten/base.html' %}
+{% load static %}
+{% block title %}
+  <title>Url was created!</title>
+  <link rel="stylesheet" href="{% static 'shorten/../../static/css/main.css' %}">
+{% endblock title %}
+{% block content %}
+    <p>
+    The following URL:<br>
+    <strong>  {{ main_url }} </strong>
+    </p>
+    <p>
+    The shortened URL:<br>
+    <strong>http://kistolbov.pythonanywhere.com/{{ short_id }} </strong>
+    </p>
+    <p>
+     You can open this link in new window <a href="http://kistolbov.pythonanywhere.com/{{ short_id }}" target="_blank">here</a> or copy to your clipboard.
+    </p>
+{% endblock content %}

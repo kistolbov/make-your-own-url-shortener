@@ -1,0 +1,46 @@
+@font-face {
+    font-family: PT Sans;
+    src: url("../fonts/pt_sans.ttf");
+}
+
+.container {
+    background: #24292E;
+}
+
+body {
+    background: #24292E;
+}
+
+p {
+    color: #D6D8DA;
+    font-family: "PT Sans", serif;
+}
+
+strong {
+    color: #D6D8DA;
+    font-family: "PT Sans", serif;
+}
+
+.text-muted {
+    color: #D6D8DA;
+    font-family: "PT Sans", serif;
+}
+
+.link {
+    color: #D6D8DA;
+    font-family: "PT Sans", serif;
+}
+
+.form-control {
+    color: #D6D8DA;
+}
+
+.messages p.success {
+    background-color: white;
+    color: #6C757D;
+    padding: 7px;
+    margin: 0 auto;
+    align-content: center;
+    font-family: "PT Sans";
+    border-radius: 5px
+}
