@@ -10,4 +10,15 @@ URL shortening is a technique on the World Wide Web in which a Uniform Resource 
 
 ## Installation 
 
-First of all, you ned to install Django. Then you need to clone this repository and migrate all Djangp project. Finally, you can start it with `python manage.py runserver`.
+First of all, you need to install Django. 
+```
+$ pip install django
+```
+Then you need to clone this repository and migrate all Django project. 
+```
+$ python manage.py migrate
+```
+Finally, you can start your server.
+```
+$ python manage.py runserver
+```
